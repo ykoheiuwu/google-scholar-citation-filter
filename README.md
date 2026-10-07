@@ -18,11 +18,11 @@ A browser extension for Google Scholar researcher profiles. Compare annual citat
 - Saves exclusions per profile and caches annual citation data locally for up to 24 hours.
 - Leaves the Google Scholar profile, citation table, h-index, and i10-index unchanged.
 
-**Version: 0.1.3 for Firefox and Chrome.** A Mozilla-signed Firefox installer is included. The interface follows Scholar's display language: Japanese or English. Other Scholar languages use English for the extension. This is an independent project, not affiliated with Google or Mozilla.
+**Source / Chrome version: 0.1.3.** The interface follows Scholar's display language: Japanese or English. Other Scholar languages use English for the extension. The bundled signed Firefox installer is still **0.1.2**, with a Japanese-only interface; Firefox 0.1.3 needs a new Mozilla signature before distribution. This is an independent project, not affiliated with Google or Mozilla.
 
 ### Download
 
-- **Firefox 0.1.3:** [Mozilla-signed installer (.xpi)](dist/scholar-citation-filter-firefox-0.1.3.xpi). This installation persists after restarting Firefox. Users do not need a Mozilla account or a signing request.
+- **Firefox 0.1.2 (previous version):** [Mozilla-signed installer (.xpi)](dist/scholar-citation-filter-firefox-0.1.2.xpi). This installation persists after restarting Firefox. Users do not need a Mozilla account or a signing request.
 - **Chrome 0.1.3:** [Chrome package (.zip)](dist/scholar-citation-filter-chrome.zip). Extract it and load its folder in Developer mode.
 
 If a link opens a GitHub file page, use **Download raw file** to save the file. If release assets are available under **Releases**, you can download the same files there. Alternatively, use **Code → Download ZIP** and extract the repository; the installers are inside `dist/`. No command-line tools are needed to use the extension.
@@ -35,7 +35,7 @@ The Firefox file ending in **`-unsigned.zip` contains 0.1.3 and is for developer
 2. If you previously loaded the temporary development version, quit and restart Firefox first to remove that temporary installation.
 3. Open `about:addons`.
 4. In the gear menu, select **Install Add-on From File…**.
-5. Select `scholar-citation-filter-firefox-0.1.3.xpi` and confirm **Add**.
+5. Select `scholar-citation-filter-firefox-0.1.2.xpi` and confirm **Add**.
 6. Open or reload a Google Scholar researcher profile.
 
 The extension remains installed after restarting Firefox. Updates are currently manual: install the signed `.xpi` for the new version using the same steps. [Mozilla installation instructions](https://extensionworkshop.com/documentation/publish/install-self-distributed/#install-add-on-from-file-on-a-computer)
@@ -54,7 +54,7 @@ This is Chrome's development installation method. On ordinary Windows and macOS 
 
 ### Use the chart
 
-On Japanese Scholar pages, the extension uses Japanese labels; on English pages it uses English labels.
+The instructions below describe 0.1.3. On Japanese Scholar pages, the extension uses Japanese labels; on English pages it uses English labels. The older signed Firefox 0.1.2 file uses the Japanese labels throughout.
 
 1. Open a researcher profile and select **View all** in the **Cited by** panel. Depending on the page language, the labels may appear as **すべて表示** and **引用先**. You can also use the added **Compare citation trends / 引用グラフを比較** button below the researcher's name.
 2. Uncheck a paper to exclude it. The first exclusion fetches that paper's annual citation data before updating the chart.
@@ -74,7 +74,7 @@ The extension reads Google Scholar's HTML and subtracts annual counts shown on p
 
 Use the adjusted chart as an exploratory comparison. It does not replace Google Scholar's citation metrics.
 
-The signed Firefox 0.1.3 package has been checked against the included source code. During development, 9 arithmetic tests, 6 language tests, and 10 browser parser tests passed, and the Japanese/English offline interface was checked. Chrome end-to-end retrieval and broad compatibility across Scholar profiles have not been comprehensively verified. No installable Safari release is provided.
+Installation of the signed Firefox 0.1.2 release has been confirmed locally. Arithmetic tests, HTML parser checks, and offline UI checks were performed during development. Chrome end-to-end retrieval and broad compatibility across Scholar profiles have not been comprehensively verified. No installable Safari release is provided.
 
 ### Privacy
 
@@ -117,11 +117,11 @@ Google Scholarの研究者プロフィール上で、論文を選択的に除外
 - 除外設定をプロフィールごとに保存し、年別データを最大24時間ローカルにキャッシュします。
 - Scholarのプロフィール、引用数の表、h-index、i10-indexは変更しません。
 
-**Firefox・Chromeともにバージョン0.1.3です。** Mozilla署名済みのFirefox用インストーラーを同梱しています。Scholarの表示言語が日本語なら日本語、英語なら英語になります。それ以外の言語では拡張部分を英語で表示します。GoogleやMozillaとは関係のない独立したプロジェクトです。
+**ソース・Chrome版：0.1.3。** Scholarの表示言語が日本語なら日本語、英語なら英語になります。それ以外の言語では拡張部分を英語で表示します。同梱の署名済みFirefox版は、まだ日本語表示のみの **0.1.2** です。Firefoxの0.1.3を配布するには、新しいMozilla署名を取得する必要があります。GoogleやMozillaとは関係のない独立したプロジェクトです。
 
 ### ダウンロード
 
-- **Firefox 0.1.3：** [Mozilla署名済みインストーラー（.xpi）](dist/scholar-citation-filter-firefox-0.1.3.xpi)。Firefoxを再起動しても導入状態が残ります。利用者のMozillaアカウント作成や署名申請は不要です。
+- **Firefox 0.1.2（旧版）：** [Mozilla署名済みインストーラー（.xpi）](dist/scholar-citation-filter-firefox-0.1.2.xpi)。Firefoxを再起動しても導入状態が残ります。利用者のMozillaアカウント作成や署名申請は不要です。
 - **Chrome 0.1.3：** [Chrome用パッケージ（.zip）](dist/scholar-citation-filter-chrome.zip)。展開してデベロッパーモードでフォルダを読み込みます。
 
 リンク先でGitHubのファイル画面が表示されたら、**Download raw file** で保存してください。**Releases** に配布ファイルがある場合は、そちらからも取得できます。**「Code → Download ZIP」** でリポジトリ全体を取得・展開した場合は、`dist/` に入っています。利用するだけならコマンド操作は不要です。
@@ -134,7 +134,7 @@ Firefox用の **`-unsigned.zip` は0.1.3の開発者向け署名申請用** で�
 2. 一時導入版を使っていた場合は、先にFirefoxを終了して起動し直し、一時導入を解除します。
 3. `about:addons` を開きます。
 4. 歯車メニューから **「ファイルからアドオンをインストール」** を選びます。
-5. `scholar-citation-filter-firefox-0.1.3.xpi` を選び、確認画面で **「追加」** を押します。
+5. `scholar-citation-filter-firefox-0.1.2.xpi` を選び、確認画面で **「追加」** を押します。
 6. Scholarの研究者プロフィールを開くか、再読み込みします。
 
 Firefoxを再起動しても導入状態が残ります。更新は現在、手動です。新しい版の署名済み `.xpi` を同じ手順で導入してください。[Mozillaの導入手順](https://extensionworkshop.com/documentation/publish/install-self-distributed/#install-add-on-from-file-on-a-computer)
@@ -153,7 +153,7 @@ Firefoxを再起動しても導入状態が残ります。更新は現在、手�
 
 ### グラフを使う
 
-日本語のScholarでは日本語、英語のScholarでは英語のボタンが表示されます。
+以下は0.1.3の説明です。日本語のScholarでは日本語、英語のScholarでは英語のボタンが表示されます。旧版の署名済みFirefox 0.1.2は常に日本語表示です。
 
 1. 研究者プロフィールの **「引用先」の「すべて表示」** を押します。ページが英語の場合は **Cited by / View all** です。研究者名の下に追加される **「引用グラフを比較 / Compare citation trends」** からも開けます。
 2. 論文のチェックを外すと、その論文を除外します。初回は年別データの取得後にグラフが更新されます。
@@ -173,7 +173,7 @@ Scholarの画面HTMLを読み取り、論文詳細に表示された年別引用
 
 調整後のグラフは傾向を比較するためのもので、Scholarの引用指標を置き換えるものではありません。
 
-署名済みFirefox 0.1.3の内容が同梱ソースと一致することを確認しています。開発時には集計テスト9件、言語判定・翻訳テスト6件、ブラウザ上のパーサーテスト10件が通過し、日本語・英語のオフライン画面も確認しました。Chromeでの一連の取得処理や、多様なScholarプロフィールでの互換性は十分に検証できていません。インストール可能なSafari版は提供していません。
+Firefox署名済み0.1.2の通常導入をローカル環境で確認しています。開発時には集計テスト9件、言語判定・翻訳テスト6件、HTMLパーサーの確認、日本語・英語のオフライン画面の確認を行いました。Chromeでの一連の取得処理や、多様なScholarプロフィールでの互換性は十分に検証できていません。インストール可能なSafari版は提供していません。
 
 ### プライバシー
 
